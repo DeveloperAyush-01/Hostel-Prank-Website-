@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hostel Masti Zone 2.0</title>
+<link rel="stylesheet" href="prank.css">
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<div id="alertBox" class="overlay">
+  <div class="alert">
+    <div class="warning">⚠️</div>
+    <h1>YOUR PHONE IS HACKED!</h1>
+    <p>Just kidding! 😂</p>
+    <p>Your phone is completely safe.</p>
+    <button onclick="closeAlert()">I GOT PRANKED 😂</button>
+  </div>
+</div>
+
+<header>
+  <h1>HOSTEL MASTI ZONE</h1>
+  <p>🔥 Hostel Life – No Rules, Only Fun!</p>
+  <span class="version">ULTIMATE EDITION 2.0</span>
+</header>
+
+<main>
+
+<section class="hero">
+  <h2>WELCOME TO THE HOSTEL WORLD</h2>
+  <p>Ready for an unforgettable prank experience?</p>
+  <button onclick="surprise()">🎁 GET SURPRISE</button>
+  <h3 id="surpriseText"></h3>
+</section>
+
+<section class="card">
+  <h2>💻 MATRIX HACKER SIMULATOR</h2>
+  <p>Fictional hacker animation</p>
+  <button onclick="startHacker()">START SIMULATION</button>
+  <div id="terminal">HOSTEL SYSTEM READY...</div>
+</section>
+
+<section class="card">
+  <h2>⏳ HOSTEL COUNTDOWN</h2>
+  <h3 id="countdown">10</h3>
+  <p id="countMessage">Get ready for the surprise!</p>
+  <button onclick="startCountdown()">START COUNTDOWN</button>
+</section>
+
+<section class="card">
+  <h2>📶 HOSTEL WIFI SCANNER</h2>
+  <p>Imaginary WiFi checking system</p>
+  <button onclick="wifiCheck()">SCAN WIFI</button>
+  <h3 id="wifiResult"></h3>
+</section>
+
+<section class="card">
+  <h2>🤣 HOSTEL QUIZ</h2>
+  <p id="question">Who is the real boss of hostel?</p>
+  <button onclick="answer('Warden')">WARDEN</button>
+  <button onclick="answer('Roommate')">ROOMMATE</button>
+  <button onclick="answer('Mess Food')">MESS FOOD</button>
+  <h3 id="quizResult"></h3>
+</section>
+
+<section class="card">
+  <h2>🏆 HOSTEL LEADERBOARD</h2>
+  <p>Enter your nickname to join the fun!</p>
+  <input id="playerName" placeholder="Enter your nickname" maxlength="20">
+  <button onclick="addPlayer()">JOIN LEADERBOARD</button>
+  <ol id="leaderboard"></ol>
+</section>
+
+<section class="card">
+  <h2>🎉 CONFETTI PARTY</h2>
+  <p>Let's celebrate hostel life!</p>
+  <button onclick="party()">START PARTY 🎊</button>
+</section>
+
+<section class="card">
+  <h2>❤️ HOSTEL FUN FACT</h2>
+  <h3 id="funFact">Click below to reveal a fact!</h3>
+  <button onclick="funFact()">REVEAL FACT</button>
+</section>
+
+</main>
+
+<footer>
+  <h3>HOSTEL MASTI ZONE ❤️</h3>
+  <p>Made for Hostel Students</p>
+  <p>All hacking and scanning effects are fictional.</p>
+  <p>© 2026 Hostel Masti Zone</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
