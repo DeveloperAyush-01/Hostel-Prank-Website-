@@ -1,48 +1,69 @@
+// const alertBox = document.getElementById("alertBox");
+
+// window.addEventListener("load", () => {
+//   alertBox.style.display = "flex";
+// });
+
+// function closeAlert() {
+//   alertBox.style.display = "none";
+// }
+
+// // MATRIX BACKGROUND
+// const canvas = document.getElementById("matrix");
+// const ctx = canvas.getContext("2d");
+
+// let drops = [];
+
+// function resizeMatrix() {
+//   canvas.width = window.innerWidth;
+//   canvas.height = window.innerHeight;
+
+//   const columns = Math.floor(canvas.width / 18);
+//   drops = Array(columns).fill(1);
+// }
+
+// resizeMatrix();
+// window.addEventListener("resize", resizeMatrix);
+
+// function drawMatrix() {
+//   ctx.fillStyle = "rgba(5,11,18,0.12)";
+//   ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+//   ctx.fillStyle = "#00ff66";
+//   ctx.font = "15px monospace";
+
+//   drops.forEach((y, i) => {
+//     const char = Math.floor(Math.random() * 10);
+//     ctx.fillText(char, i * 18, y * 18);
+
+//     if (y * 18 > canvas.height && Math.random() > 0.97) {
+//       drops[i] = 0;
+//     }
+
+//     drops[i]++;
+//   });
+// }
 const alertBox = document.getElementById("alertBox");
 
 window.addEventListener("load", () => {
-  alertBox.style.display = "flex";
+    alertBox.style.display = "flex";
+
+    let remaining = 60;
+
+    const timer = document.getElementById("timer");
+
+    const interval = setInterval(() => {
+        remaining--;
+
+        timer.textContent = remaining;
+
+        if (remaining <= 0) {
+            clearInterval(interval);
+            alertBox.style.display = "none";
+        }
+
+    }, 1000);
 });
-
-function closeAlert() {
-  alertBox.style.display = "none";
-}
-
-// MATRIX BACKGROUND
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
-
-let drops = [];
-
-function resizeMatrix() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  const columns = Math.floor(canvas.width / 18);
-  drops = Array(columns).fill(1);
-}
-
-resizeMatrix();
-window.addEventListener("resize", resizeMatrix);
-
-function drawMatrix() {
-  ctx.fillStyle = "rgba(5,11,18,0.12)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  ctx.fillStyle = "#00ff66";
-  ctx.font = "15px monospace";
-
-  drops.forEach((y, i) => {
-    const char = Math.floor(Math.random() * 10);
-    ctx.fillText(char, i * 18, y * 18);
-
-    if (y * 18 > canvas.height && Math.random() > 0.97) {
-      drops[i] = 0;
-    }
-
-    drops[i]++;
-  });
-}
 
 setInterval(drawMatrix, 60);
 
